@@ -4,8 +4,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Point p1 = new Point();
-		/*int vrednost = 20;
+		/*Point p1 = new Point();
+		int vrednost = 20;
 		System.out.println(vrednost);
 		System.out.println(p1);
 		
@@ -20,7 +20,7 @@ public class Test {
 		p2 = p1;
 		System.out.println(p2.x);
 		p1.x = 33;
-		System.out.println(p2.x);*/
+		System.out.println(p2.x);
 		
 		p1.setX(5);
 		p1.setY(4);
@@ -39,8 +39,23 @@ public class Test {
 		System.out.println(p1);
 		System.out.println(p2);
 		System.out.println(l1.getStartPoint().getX());
-		System.out.println(l1.getEndPoint().getX());
+		System.out.println(l1.getEndPoint().getX());*/
 		
+		//Vezbe 4
+		
+		Point p1 = new Point();
+		p1.setX(5);
+		p1.setY(5);
+		System.out.println(p1.getX());
+		System.out.println(p1.getY());
+		
+		Point p2 = new Point(10,10,true);
+		System.out.println(p2.getX());
+		System.out.println(p2.getY());
+		p2.setX(50);
+		System.out.println(p2.getX());
+		
+		System.out.println(p1);
 	}
 
 }

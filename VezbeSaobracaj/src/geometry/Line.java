@@ -6,6 +6,24 @@ public class Line {
 	private Point endPoint;
 	private boolean selected;
 	
+	public Line() {
+		
+	}
+	
+	public Line(Point startPoint, Point endPoint) {
+		this.endPoint = endPoint;
+		this.startPoint = startPoint;
+	}
+	
+	public Line(Point startPoint, Point endPoint, boolean selected) {
+		this(startPoint,endPoint);
+		this.selected = selected;
+	}
+	
+	public double length() {
+		return startPoint.distance(endPoint);
+	}
+	
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}

@@ -6,10 +6,31 @@ public class Point {
 	private int y;
 	private boolean selected;
 	
+	public Point() {
+		
+	}
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Point(int x, int y, boolean selected) {
+		//this.x = x;
+		//this.y = y;
+		this(x,y);
+		this.selected = selected;
+	}
+	
 	public double distance(Point p) {
 		int dx = this.x - p.getX();
 		int dy = this.y - p.getY();
 		return Math.sqrt(dx*dx + dy*dy);
+	}
+	
+	@Override
+	public String toString() {
+		return "(" + this.x + "," + this.y+ ")";
 	}
 	
 	public void setX(int x) {
