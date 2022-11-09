@@ -30,6 +30,12 @@ public class Rectangle {
 		return 2*height+2*width;
 	}
 	
+	@Override
+	public String toString() {
+		return "Upper left point: (" + upperLeft.getX()+ ", " + upperLeft.getY() + 
+				", width = " + width + ", height = "+ height;
+	}
+	
 	public int getWidth() {
 		return width;
 	}

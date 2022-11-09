@@ -24,6 +24,12 @@ public class Line {
 		return startPoint.distance(endPoint);
 	}
 	
+	@Override
+	public String toString() {
+		return "("+ startPoint.getX() + ", " + startPoint.getY()+ 
+				") --> (" + endPoint.getX() + ", " + endPoint.getY()+ ")";
+	}
+	
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}

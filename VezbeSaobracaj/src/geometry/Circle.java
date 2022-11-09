@@ -28,6 +28,11 @@ public class Circle {
 		return 2*radius*Math.PI;
 	}
 	
+	@Override
+	public String toString() {
+		return "Center: ("+ center.getX()+ ", " + center.getY()+"), radius = " + radius;
+	}
+	
 	public int getRadius() {
 		return radius;
 	}
