@@ -1,6 +1,6 @@
 package geometry;
 
-public class Circle {
+public class Circle extends Object {
 
 	private int radius;
 	private Point center;
@@ -31,6 +31,17 @@ public class Circle {
 	@Override
 	public String toString() {
 		return "Center: ("+ center.getX()+ ", " + center.getY()+"), radius = " + radius;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Circle) {
+			Circle temp = (Circle)obj;
+			if(this.radius == temp.getRadius()) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public int getRadius() {

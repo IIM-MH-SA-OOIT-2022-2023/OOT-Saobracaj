@@ -36,6 +36,17 @@ public class Rectangle {
 				", width = " + width + ", height = "+ height;
 	}
 	
+	@Override 
+	public boolean equals(Object obj) {
+		if(obj instanceof Rectangle) {
+			Rectangle temp = (Rectangle)obj;
+			if(this.height == temp.getHeight() && this.width == temp.getWidth()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public int getWidth() {
 		return width;
 	}

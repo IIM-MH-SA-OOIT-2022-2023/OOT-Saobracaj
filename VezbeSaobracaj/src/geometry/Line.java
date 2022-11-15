@@ -30,6 +30,18 @@ public class Line {
 				") --> (" + endPoint.getX() + ", " + endPoint.getY()+ ")";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Line) {
+			Line temp = (Line)obj;
+			if(this.startPoint.equals(temp.getStartPoint()) &&
+					this.endPoint.equals(temp.getEndPoint())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}

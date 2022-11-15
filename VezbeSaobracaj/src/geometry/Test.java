@@ -43,7 +43,7 @@ public class Test {
 		
 		//Vezbe 4
 		
-		Point p1 = new Point();
+		/*Point p1 = new Point();
 		p1.setX(5);
 		p1.setY(5);
 		System.out.println(p1.getX());
@@ -55,7 +55,30 @@ public class Test {
 		p2.setX(50);
 		System.out.println(p2.getX());
 		
-		System.out.println(p1);
+		System.out.println(p1);*/
+		
+		//Vezbe
+		Rectangle r1 = new Rectangle();
+		Rectangle r2 = new Rectangle();
+		
+		//System.out.println(r1 == r2);
+		
+		Point p1 = new Point(5,5,true);
+		Point p2 = new Point(5,5,false);
+		Object p3 = new Point(5,5,false);
+		Line l1 = new Line(p1,p2);
+		Circle c1 = new Circle(new Point(7,7),15);
+		Circle c2 = new Circle(new Point(8,8),15);
+		
+		System.out.println(p1.equals(p3));//true
+		System.out.println(l1.equals(r1));//false 
+		System.out.println(c1.equals(c2));//true
+		System.out.println(r1.equals(r2));//true
+		System.out.println(c1.equals(p2));//false
+		
+		
+		
+		
 	}
 
 }
