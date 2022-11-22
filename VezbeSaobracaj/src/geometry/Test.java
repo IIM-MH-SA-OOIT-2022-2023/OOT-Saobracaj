@@ -58,7 +58,7 @@ public class Test {
 		System.out.println(p1);*/
 		
 		//Vezbe
-		Rectangle r1 = new Rectangle();
+		/*Rectangle r1 = new Rectangle();
 		Rectangle r2 = new Rectangle();
 		
 		//System.out.println(r1 == r2);
@@ -74,10 +74,27 @@ public class Test {
 		System.out.println(l1.equals(r1));//false 
 		System.out.println(c1.equals(c2));//true
 		System.out.println(r1.equals(r2));//true
-		System.out.println(c1.equals(p2));//false
+		System.out.println(c1.equals(p2));//false*/
 		
+		//Vezbe 6
+		Line l1 = new Line(new Point(5,5), new Point(10,10));
+		//System.out.println(l1.length());
+		Point mestoKlika = new Point(20,20);
+		double udaljenostOdKlikaDoPT = mestoKlika.distance(new Point(5,5));
+		double udaljenostOdKlikaDoKT = mestoKlika.distance(new Point(10,10));
+		//System.out.println("Duzina zamisljene linije je: "
+				//+udaljenostOdKlikaDoKT + udaljenostOdKlikaDoPT);
 		
+		//System.out.println(l1.contains(8, 5));
 		
+		Point upperLeft = new Point(5,3);
+		Rectangle r1 = new Rectangle(upperLeft,10,5);
+		System.out.println(r1.contains(11, 2));
+		System.out.println(r1.contains(13, 6));
+		System.out.println(r1.contains(5, 7));
+		
+		Donut d1 = new Donut();
+		System.out.println(d1 instanceof Circle);
 		
 	}
 

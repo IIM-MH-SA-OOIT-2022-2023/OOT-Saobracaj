@@ -24,6 +24,13 @@ public class Line {
 		return startPoint.distance(endPoint);
 	}
 	
+	public boolean contains(int x, int y) {
+		double d1 = startPoint.distance(new Point(x,y));
+		double d2 = endPoint.distance(new Point(x,y));
+		double razlika = length() - (d1+d2);
+		return razlika <= 2 && razlika >= 0;
+	}
+	
 	@Override
 	public String toString() {
 		return "("+ startPoint.getX() + ", " + startPoint.getY()+ 

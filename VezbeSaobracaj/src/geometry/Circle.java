@@ -28,6 +28,14 @@ public class Circle extends Object {
 		return 2*radius*Math.PI;
 	}
 	
+	public boolean contains(int x, int y) {
+		return (center.distance(new Point(x,y))<= radius);
+	}
+	
+	public boolean contains(Point p) {
+		return contains(p.getX(), p.getY());
+	}
+	
 	@Override
 	public String toString() {
 		return "Center: ("+ center.getX()+ ", " + center.getY()+"), radius = " + radius;
