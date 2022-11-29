@@ -77,7 +77,7 @@ public class Test {
 		System.out.println(c1.equals(p2));//false*/
 		
 		//Vezbe 6
-		Line l1 = new Line(new Point(5,5), new Point(10,10));
+		/*Line l1 = new Line(new Point(5,5), new Point(10,10));
 		//System.out.println(l1.length());
 		Point mestoKlika = new Point(20,20);
 		double udaljenostOdKlikaDoPT = mestoKlika.distance(new Point(5,5));
@@ -94,7 +94,11 @@ public class Test {
 		System.out.println(r1.contains(5, 7));
 		
 		Donut d1 = new Donut();
-		System.out.println(d1 instanceof Circle);
+		System.out.println(d1 instanceof Circle);*/
+
+						//VEZBE 7
+		
+		Donut d2 = new Donut();
 		
 	}
 

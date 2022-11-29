@@ -1,10 +1,11 @@
 package geometry;
 
-public class Line {
+import java.awt.Graphics;
+
+public class Line extends Shape {
 
 	private Point startPoint;
 	private Point endPoint;
-	private boolean selected;
 	
 	public Line() {
 		
@@ -49,12 +50,10 @@ public class Line {
 		return false;
 	}
 	
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
-	
-	public boolean isSelected() {
-		return selected;
+	@Override
+	public void draw(Graphics g) {
+		g.drawLine(startPoint.getX(), startPoint.getY()
+				, endPoint.getX(), endPoint.getY());
 	}
 	
 	public void setStartPoint(Point startPoint) {

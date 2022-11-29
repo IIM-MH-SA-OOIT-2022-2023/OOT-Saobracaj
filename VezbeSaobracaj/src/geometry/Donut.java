@@ -3,10 +3,9 @@ package geometry;
 public class Donut extends Circle {
 
 	private int innerRadius;
-	private boolean selected;
 	
 	public Donut() {
-		
+
 	}
 	
 	public Donut(Point center, int radius, int innerRadius) {
@@ -48,15 +47,6 @@ public class Donut extends Circle {
 			}
 		}
 		return false;
-	}
-	
-	
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
-	
-	public boolean isSelected() {
-		return selected;
 	}
 	
 	public void setInnerRadius(int innerRadius) {
