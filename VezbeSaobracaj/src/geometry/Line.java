@@ -56,6 +56,29 @@ public class Line extends Shape {
 				, endPoint.getX(), endPoint.getY());
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		//Metoda nema implementaciju
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		//startPoint.setX(startPoint.getX()+byX); - losa implementacija
+		//byX = 20, byY = 30
+		startPoint.moveBy(byX, byY);
+		endPoint.moveBy(byX, byY);
+		
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Line) {
+			Line temp = (Line)o;
+			return ((int)(this.length() - temp.length()));
+		}
+		return 0;
+	}
+	
 	public void setStartPoint(Point startPoint) {
 		this.startPoint = startPoint;
 	}
@@ -71,4 +94,6 @@ public class Line extends Shape {
 	public Point getEndPoint() {
 		return endPoint;
 	}
+
+	
 }

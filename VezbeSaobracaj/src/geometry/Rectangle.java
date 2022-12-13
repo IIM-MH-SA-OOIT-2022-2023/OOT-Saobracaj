@@ -63,6 +63,26 @@ public class Rectangle extends Shape{
 				width, height);
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		upperLeft.moveTo(x, y);
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		upperLeft.moveBy(byX, byY);
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Rectangle) {
+			Rectangle temp = (Rectangle)o;
+			return this.area() - temp.area();
+		}
+		return 0;
+		
+	}
+	
 	public int getWidth() {
 		return width;
 	}
@@ -86,4 +106,6 @@ public class Rectangle extends Shape{
 	public void setUpperLeft(Point upperLeft) {
 		this.upperLeft = upperLeft;
 	}
+
+	
 }

@@ -55,8 +55,30 @@ public class Circle extends Shape {
 	
 	@Override
 	public void draw(Graphics g) {
-		g.drawOval(center.getX(), center.getY()
-				, radius, radius);
+		g.drawOval(center.getX()-radius, center.getY()-radius
+				, radius*2, radius*2);
+	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		center.moveTo(x, y);
+		
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		center.moveBy(byX, byY);
+		
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Circle) {
+			Circle temp = (Circle)o;
+			return ((int)(this.area() - temp.area()));
+		}
+		return 0;
+		
 	}
 	
 	public int getRadius() {
@@ -71,5 +93,7 @@ public class Circle extends Shape {
 	public void setCenter(Point center) {
 		this.center = center;
 	}
+
+	
 	
 }

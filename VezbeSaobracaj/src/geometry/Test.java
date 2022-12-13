@@ -98,7 +98,21 @@ public class Test {
 
 						//VEZBE 7
 		
-		Donut d2 = new Donut();
+		//Donut d2 = new Donut();
+		
+						//VEZBE 8
+		Line l1 = new Line(new Point(5,5), new Point(10,10));
+		l1.moveBy(20, 30);
+		System.out.println(l1.getStartPoint().getX());//25
+		System.out.println(l1.getEndPoint().getY());//40
+		
+		Point p1 = new Point(10,10);
+		Point p2 = new Point(5,5);
+		System.out.println(p1.compareTo(l1));
+		
+		Donut d1 = new Donut(p1,30,15);
+		Donut d2 = new Donut(p1,20,10);
+		System.out.println(d1.compareTo(d2));
 		
 	}
 
