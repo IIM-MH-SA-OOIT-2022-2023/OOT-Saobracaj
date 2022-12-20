@@ -2,7 +2,7 @@ package geometry;
 
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		/*Point p1 = new Point();
 		int vrednost = 20;
@@ -101,7 +101,7 @@ public class Test {
 		//Donut d2 = new Donut();
 		
 						//VEZBE 8
-		Line l1 = new Line(new Point(5,5), new Point(10,10));
+		/*Line l1 = new Line(new Point(5,5), new Point(10,10));
 		l1.moveBy(20, 30);
 		System.out.println(l1.getStartPoint().getX());//25
 		System.out.println(l1.getEndPoint().getY());//40
@@ -112,7 +112,40 @@ public class Test {
 		
 		Donut d1 = new Donut(p1,30,15);
 		Donut d2 = new Donut(p1,20,10);
-		System.out.println(d1.compareTo(d2));
+		System.out.println(d1.compareTo(d2));*/
+		
+						//Vezbe 10
+		int[] niz = new int[3];
+		
+		//System.out.println("Ispis");
+		
+		Line l1 = new Line();
+		
+		
+		String string = "sab";
+		
+		
+		try {
+			//int broj = niz[5];
+			//l1.getStartPoint().getX();
+			//Integer.parseInt(string);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Desila se greska u nizu");
+		} catch (NumberFormatException n) {
+			System.out.println("Desila se greska pri pretvaranju stringa u broj");
+		} catch (NullPointerException ne) {
+			System.out.println("Desila se greska sa objektom koji ne postoji");
+		}
+		
+		Circle c1 = new Circle();
+		
+		try {
+			c1.setRadius(-5);
+		} catch (Exception e) {
+			System.out.println("Radijus mora biti pozitivan");
+		}
+		
+		
 		
 	}
 

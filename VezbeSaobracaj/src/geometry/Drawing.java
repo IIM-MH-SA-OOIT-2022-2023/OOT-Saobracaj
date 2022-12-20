@@ -33,7 +33,7 @@ public class Drawing extends JPanel {
 		c1.draw(g);
 		r1.draw(g);*/
 		
-		ArrayList<Shape> lista = new ArrayList<Shape>();
+		/*ArrayList<Shape> lista = new ArrayList<Shape>();
 		Point p1 = new Point(300,300);
 		Line l1 = new Line(p1, new Point(400,400));
 		Rectangle r1 = new Rectangle(p1,50,50);
@@ -43,7 +43,7 @@ public class Drawing extends JPanel {
 		lista.add(l1);
 		lista.add(r1);
 		lista.add(c1);
-		lista.add(d1);
+		lista.add(d1);*/
 		
 		/*for(Shape s: lista) {
 			//s.moveBy(10, 0);
@@ -63,11 +63,13 @@ public class Drawing extends JPanel {
 		//lista.add(3, l1);
 		//Iscrtati samo krugove i
 		//Iscrtati samo površinske oblike (krug, krug sa rupom, pravougaonik)
-		for(Shape s: lista) {
+		/*for(Shape s: lista) {
 			if(s instanceof Circle || s instanceof Rectangle) {
 				s.draw(g);
 			}
-		}
+		}*/
+		Point p1 = new Point(500,500,true);
+		p1.draw(g);
 		
 	}
 	

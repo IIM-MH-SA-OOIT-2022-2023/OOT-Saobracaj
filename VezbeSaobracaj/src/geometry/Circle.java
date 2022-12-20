@@ -84,8 +84,13 @@ public class Circle extends Shape {
 	public int getRadius() {
 		return radius;
 	}
-	public void setRadius(int radius) {
-		this.radius = radius;
+	public void setRadius(int radius) throws Exception {
+		if(radius > 0) {
+			this.radius = radius;
+		}else {
+			throw new Exception("Prosledjen los radius");
+		}
+		
 	}
 	public Point getCenter() {
 		return center;
